@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+input {
+  font-family: 'Noto Sans KR', 'Noto Sans Korean', "Nanum Gothic", sans-serif !important;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  outline: none;
+  font-size: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* input::placeholder {
+  color: #d9d9d9
+} */
+.non-dust-class {
+  width: 50%;
+  box-sizing: border-box;
+  margin: 20px auto;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dust-class {
+  width: 50%;
+  box-sizing: border-box;
+  margin: 20px auto;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.non-dust-class label {
+  display: inline-block;
+  position: absolute;
+  top: -1px;
+  left: 20px;
+  padding: 5px;
+  background: white;
+  font-size: 12px;
+  color: #888;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.dust-class label {
+  display: inline-block;
+  position: absolute;
+  top: 24px;
+  left: 25px;
+  padding: 5px;
+  font-size: 14px;
+  color: #888;
+  /* font-weight: bold; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.non-dust-class label span {
+  color: #250200;
+  vertical-align: -1px;
+}
+
+.dust-class label span {
+  color: #979797;
+  vertical-align: -1px;
+}
+
+.non-dust-class input {
+  width: 100%;
+  border: 1px solid #dddddd !important;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: -0.04rem;
+  border-radius: 8px;
+  padding: 16px;
+  padding-left: 30px;
+  margin-top: 12px;
+}
+
+.dust-class input {
+  width: 100%;
+  border: 1px solid #dddddd !important;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: -0.04rem;
+  border-radius: 8px;
+  padding: 16px;
+  padding-left: 30px;
+  margin-top: 12px;
+}
+
+.A {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 1px;
+  padding: 10px;
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+}
+.A {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 1px;
+  padding: 10px;
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
 }
