@@ -102,3 +102,25 @@ input {
   color: #888;
   font-weight: bold;
 }
+
+.loginPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.loginPage .logo {
+  display: inline-flex;
+}
+
+.loginPage .loginInput{
+  display: flex;
+  align-items: flex-end;
+}
+
+.loginPage form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
