@@ -17,9 +17,9 @@ const TodoList = () => {
 
     //체크박스를 누를 때 마다 바뀔 이미지 3개
     const images = [
-        '/image/mood_1.png',
-        '/image/mood_2.png',
-        '/image/mood_3.png'
+        '/image/todo_null.png',
+        '/image/todo_ing.png',
+        '/image/todo_ok.png'
     ]
 
     //todolist의 input 텍스트 업데이트 해주는 핸들러
@@ -31,6 +31,7 @@ const TodoList = () => {
             return updateArray;
         });
     }
+
 
     // 어떻게 해야 todos.img를 각 객체별로 바꿀 수 있을까??? 
     //img값을 +1한 후 3으로 나눠서 나머지 값으로 대입.  

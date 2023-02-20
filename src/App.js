@@ -22,7 +22,7 @@ function App() {
         <Route path="/regist" component={Regist} />
         <Loginpage />
         <button value="모달띄우기" className="modalbtn" onClick={() => setModalState(true)}>모달띄우기버튼</button>
-        {modalState && <Modal closeModal={closeModal} />}
+        {modalState && <Modal closeModal={closeModal} />}m
         <hr /> */}
         <TodoList/>
       </BrowserRouter>
