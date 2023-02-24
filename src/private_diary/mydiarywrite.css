@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'BMDOHYEON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 버튼서체 */
+@font-face {
+    font-family: 'LeferiPoint-SpecialA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 백그라운드 이미지 */
+.mydiarywrite_background {
+    background-image: url('../img/bg_myWrite.png');
+    background-attachment: fixed !important;
+    background-size: cover;
+    display: block;
+    padding: 0 300px;
+    height: 1080px;
+}
+
+.mydiarywrite_background::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+
+/* 전체 컨테이너 */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 0;
+}
+
+.container h1 {
+    font-family: 'BMDOHYEON';
+}
+
+form {
+    width: 100%;
+    display: inline-block;
+}
+
+/* 날씨, 기분 선택 */
+.writeheader {
+    width: 100%;
+}
+
+.writeheader .weather-container,
+.writeheader .mood-container {
+    width: 49.5%;
+    height: 70px;
+    float: left;
+    background-color: #cccccc;
+    font-family: 'BMDOHYEON';
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.writeheader .mood-container {
+    float: right;
+}
+
+.writeheader .weather-container button,
+.writeheader .mood-container button {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.writeheader .weather-container p,
+.writeheader .mood-container p {
+    display: inline-block;
+    height: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 70px;
+    padding: 0px 20px;
+}
+
+/* 일기 본문 */
+.writebody textarea {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #cccccc;
+    height: 400px;
+    font-family: 'BMDOHYEON';
+    padding: 30px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 18px;
+}
+
+/* placeholder 값 설정 */
+.writebody textarea::placeholder {
+    font-size: 15px;
+    color: white;
+}
+
+.writefooter {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    float: left;
+    background-color: #cccccc;
+    font-family: 'BMDOHYEON';
+    margin-top: 30px;
+}
+
+/* 파일 첨부 */
+.writefooter::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.writefooter .fileBox input,
+.writefooter .fileBox ::-webkit-file-upload-button {
+    font-family: 'BMDOHYEON';
+    margin-left: 10px;
+    font-size: 15px;
+    height: 40px;
+}
+
+
+
+/* 제출 버튼 */
+.submit {
+    float: right;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255);
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+    font-family: 'BMDOHYEON';
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}

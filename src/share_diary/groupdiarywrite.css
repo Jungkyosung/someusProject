@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'BMDOHYEON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 타이틀 */
+@font-face {
+    font-family: 'Tenada';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 버튼서체 */
+@font-face {
+    font-family: 'LeferiPoint-SpecialA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 내용 서체 */
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 백그라운드 이미지 */
+.groupWrite_background {
+    background-image: url('../img/bg_groupWrite.png');
+    background-attachment: fixed !important;
+    background-size: cover;
+    display: block;
+    padding: 0 300px;
+    height: 1080px;
+}
+
+.groupWrite_background::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+
+/* 전체 컨테이너 */
+.groupWrite_container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+.groupWrite_container h1 {
+    font-family: 'Tenada';
+    font-size: 42px;
+}
+
+/* 날씨, 기분 선택 */
+.writeheader0 {
+    width: 100%;
+}
+
+.writeheader0 .weather-container0,
+.writeheader0 .mood-container0 {
+    width: 49.5%;
+    height: 70px;
+    float: left;
+    background-color: #cccccc;
+    font-family: 'Tenada';
+    font-size: 20px;
+    padding: 0px 30px;
+}
+
+.writeheader0 .mood-container0 {
+    float: right;
+}
+
+.writeheader0 .weather-container0 button,
+.writeheader0 .mood-container0 button {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.writeheader0 .weather-container0 p,
+.writeheader0 .mood-container0 p {
+    display: inline-block;
+    height: 70px;
+    line-height: 70px;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 5px 30px 5px 0px;
+}
+
+/* 일기 본문 */
+.writebody_box {
+    width: 100%;
+    background-color: #cccccc;
+    height: 400px;
+    font-family: 'KyoboHand';
+    font-size: 22px;
+    color: black;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border: none;
+    resize: none;
+}
+
+.writebody_box:focus {
+    border: 6px dotted #A5F2AD;
+    outline: none;
+}
+
+/* 일기 본문 placeholder 값 설정 */
+.writebody_box::placeholder {
+    font-size: 18px;
+    color: gray;
+}
+
+/* 파일첨부 */
+.writefooter0 {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: #cccccc;
+    margin-top: 30px;
+    padding: 0px 30px;
+}
+
+.writefooter0::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.fileBox0 {
+    font-family: 'LeferiPoint-SpecialA';
+    font-size: 16px;
+    font-weight: bold;
+    color: #666666;
+}
+
+.writefooter0 .fileBox0::-webkit-file-upload-button {
+    font-family: 'LeferiPoint-SpecialA';
+    font-size: 16px;
+    font-weight: bold;
+    height: 45px;
+    line-height: 45px;
+    padding: 0px 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    transition: all .1s ease;
+    border: 3px solid #facb33;
+    background-color: #f1f2a5;
+    cursor: pointer;
+}
+
+/* 제출 버튼 */
+.submit0 {
+    float: right;
+    width: 100px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50px;
+    transition: all .1s ease;
+    border: 3px solid #14B21F;
+    background-color: #A5F2AD;
+    font-family: 'LeferiPoint-SpecialA';
+    font-size: 16px;
+    color: white;
+    margin-top: 40px;
+    padding: 0px;
+    cursor: pointer;
+}
+.submit0:hover {
+    background-color: #14B21F;
+    border: 3px solid #A5F2AD;
+    box-shadow: 0px 0px 8px #14B21F;
+    font-size: 18px;
+  }

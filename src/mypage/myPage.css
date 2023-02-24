@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+.mypageBackground {
+  width: 1920px;
+  background-image: url('../img/bgB_mypage.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  height: 100vh;
+  /* position: relative; */
+  /* padding: 200px 100px; */
+}
+
+.mypageBackground::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.mypage {
+  width: 1040px;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+/* 다이어리 선택 */
+.myD {
+  width: 500px;
+  height: 550px;
+  margin-right: 40px;
+  background-image: url('../img/D_blue.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all .2s ease;
+  cursor: pointer;
+}
+.myD:hover {
+  background-image: url('../img/D_hblue.png');
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px #2179F9;
+  border-radius: 20px;
+}
+.groupD {
+  width: 500px;
+  height: 550px;
+  background-image: url('../img/D_green.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all .2s ease;
+  cursor: pointer;
+}
+.groupD:hover {
+  background-image: url('../img/D_hgreen.png');
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px #14B21F;
+  border-radius: 20px;
+}
+
+@media (max-width: 1920px) {
+  .loginPage {
+    width: 1920px;
+  }
+}

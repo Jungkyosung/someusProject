@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* ----------- main ---------- */
+.main_background {
+  background-image: url('../img/bgB_main.png');
+  background-position: center;
+  background-size: cover;
+  display: block;
+  height: 1080px;
+  box-sizing: border-box;
+  padding-top: 800px; 
+}
+.main_background::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* main text */
+.main_background h1 {
+  font-family: 'Yeongdo-Rg';
+  margin: 0px auto;
+  width: 380px;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.main_background h1::after {
+  content: '';
+  margin-left: .4rem;
+  border-right: 2px solid #777;
+  animation: cursor .9s infinite steps(2);
+}
+@keyframes cursor {
+  from { border-right: 2px solid #222; }
+  to { border-right: 2px solid #777; }
+}
+
+
+/* ----------- footer --------------- */
+.footer {
+  background-color: black;
+  padding: 15px;
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+/* -----------howto --------------- */
+.howto_background {
+  background-image: url('../img/bgB_detail.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  
+}
+
+
+
+.howto_background::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.howto_background img {
+  width: 100%;
+  position: relative;
+}
+
+.howto_container {
+  background-color: pink;
+  margin: 0 100px;
+}
+
+.howto_container input {
+  width: 400px;
+  text-align: center;
+}

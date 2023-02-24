@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Tenada';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 투두 */
+@font-face {
+    font-family: 'insungitCutelivelyjisu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/insungitCutelivelyjisu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.todo_box {
+    background-color: rgba(255, 213, 213, 0.5);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* 투두 헤더 */
+.Todo {
+    font-family: 'Tenada';
+    font-size: 24px;
+    width: 100%;
+    margin: auto;
+    padding: 15px 10px;
+}
+
+.Todo button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: pink;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    float: right;
+}
+
+/* 투두 입력 */
+.checkboxImg {
+    width: 35px;
+    vertical-align: middle;
+}
+
+.TodoListCheckBox ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.TodoListCheckBox ul li {
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.TodoListCheckBox ul li input {
+    width: 80%;
+    border: none;
+    background: none;
+    border-bottom: 2px solid pink;
+    outline: none;
+    margin-left: 10px;
+    padding: 5px;
+    font-family: 'insungitCutelivelyjisu';
+    font-size: 18px;
+}
+
+@media (max-width: 1920px) {
+    .todo_box {
+        width: 100%;
+    }
+}

@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+.registPage {
+  width: 1920px;
+  background-image: url('../img/bgB_login.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  height: 100vh;
+  box-sizing: border-box;
+  /* padding: 200px 100px; */
+}
+
+.registContainer {
+  width: 1000px;
+  height: 520px;
+  border-radius: 20px;
+  background-color: rgba(169, 169, 169, 0.4);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 로고 */
+.registLogo {
+  /* background-color: pink; */
+  width: 500px;
+  height: 500px;
+  background-image: url('../img/logo_black.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  float: left;
+}
+
+.registPage .registInput {
+  /* background-color: skyblue; */
+  width: 500px;
+  height: 500px;
+  padding: 0px 100px 0px 20px;
+  float: left;
+}
+
+.registForm {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.registForm input {
+  font-family: 'Noto Sans KR', 'Noto Sans Korean', "Nanum Gothic", sans-serif !important;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+  outline: none;
+  font-size: 10px;
+}
+
+.registInputBox1 {
+  width: 100%;
+  box-sizing: border-box;
+  /* margin: 0 auto; */
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.registInputBox2 {
+  width: 100%;
+  box-sizing: border-box;
+  /* margin: 0 auto; */
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.registInputBox1 input {
+  width: 100%;
+  border: 1px solid #dddddd !important;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: -0.04rem;
+  border-radius: 8px;
+  padding: 16px 0px 18px 19px;
+  padding-left: 30px;
+}
+
+.registInputBox2 input {
+  width: 100%;
+  border: 1px solid #dddddd !important;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: -0.04rem;
+  border-radius: 8px;
+  padding: 16px 0px 18px 19px;
+  padding-left: 30px;
+  /* margin-top: 12px; */
+}
+
+.registInputBox1 label {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 25px;
+  padding: 5px;
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+}
+
+.registInputBox2 label {
+  display: inline-block;
+  position: absolute;
+  left: 25px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0);
+  font-size: 10px;
+  color: #888;
+  font-weight: bold;
+}
+
+/* 입력시 작게 뜨는 글씨 */
+.registInputBox1 label span {
+  color: #979797;
+  vertical-align: -1px;
+}
+
+.registInputBox2 label span {
+  color: gray;
+  vertical-align: -1px;
+}
+
+/* 가입하기 버튼 */
+#registButton1 {
+  width: 80px;
+  height: 35px;
+  border-radius: 50px;
+  border: 3px solid#A9A9A9;
+  transition: all .5s ease;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  float: right;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+#registButton2{
+  width: 80px;
+  height: 35px;
+  border-radius: 50px;
+  border: 3px solid#A9A9A9;
+  transition: all .5s ease;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  float: right;
+  margin-left: 15px;
+}
+
+#registButton1:hover {
+  background-color: #A9A9A9;
+  border: 3px solid black;
+  box-shadow: 0px 0px 8px black;
+  color: black;
+  font-size: 15px;
+  text-shadow: rgba(255, 255, 255, 0.4);
+}
+
+.checkCircle {
+  /* background-color: aquamarine; */
+  position: absolute;
+  right: 3%;
+  top: 40%;
+  width: 10%;
+}
+
+/* placeholder 아이콘 */
+.A {
+  width: 23px;
+  height: 23px;
+  background-image: url('../img/login_icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 23px 23px;
+  position: absolute;
+  top: 18px;
+  left: 5px;
+  font-size: 14px;
+  color: #888;
+  font-weight: bold;
+}
+
+.confirmMsg{
+  font-size: 0.7rem;
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+.confirmMsg2{
+  font-size: 0.7rem;
+  position: relative;
+  width: 100%;
+  height: 30px;
+}
+
+@media (max-width: 1920px) {
+  .loginPage {
+    width: 1920px;
+  }
+}

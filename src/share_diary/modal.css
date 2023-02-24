@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+.vertical_line {
+  width: 1.5px;
+  height: 700px;
+  background-color: rgb(164, 196, 152);
+}
+.group_modalBody {
+  position: fixed;
+  display: flex;
+  width: 1200px;
+  height: 780px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: #FFFDE7;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+/* ----------------------GroupL */
+.groupL_modal {
+  width: 45%;
+  height: 100%;
+  text-align: center;
+}
+/* 이미지 */
+.groupL_modalImgbox {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+.groupL_modalImgbox .groupL_modalImg {
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.groupL_modalImgbox { display: block; content: ""; clear: both;}
+
+/* 글쓰기 */
+.groupL_write {
+  width: 100%;
+  height: 50%;
+  padding: 0px 30px;
+}
+/* 글쓴 헤더 */
+.groupL_modalHeader {
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  font-weight: bold;
+  border-bottom: 5px dotted #A5F2AD;
+}
+/* 날짜 */
+.groupL_date {
+  float: left;
+  font-family: 'Tenada';
+  font-size: 22px;
+}
+
+/* 날씨, 마음 */
+.groupL_modalHeaderRight {
+  float: right;
+  padding: 5px;
+}
+.groupL_weather {
+  width: 45px;
+  height: 45px;
+  background-image: url('../img/weather_2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  float: left;
+}
+.groupL_mood {
+  width: 45px;
+  height: 45px;
+  background-image: url('../img/mood_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 12px;
+  float: left;
+}
+
+.group_dairyContents {
+  width: 100%;
+  height: 250px;
+  margin: 12px 0px;
+  padding: 5px 12px 5px 5px;
+  text-align: justify;
+  /* scroll */
+  line-height: 35px;
+  overflow-y: auto;
+  -webkit-line-clamp: 7;
+  /* 원하는 줄 수를 입력하세요 */
+  background: none;
+  font-family: 'KyoboHand';
+  font-size: 22px;
+  border: none;
+  resize: none;
+  /* textarea 사이즈 조절 막기 */
+
+}
+.group_dairyContents::-webkit-scrollbar {
+  width: 5px;
+}
+.group_dairyContents::-webkit-scrollbar-thumb {
+  background-color: #ffed86;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+.group_dairyContents::-webkit-scrollbar-thumb:hover {
+  background-color: #A5F2AD
+}
+
+.groupL_modalClose {
+  position: absolute;
+  right: 10px;
+  left: 10px;
+}
+
+/* ----------------------GroupR */
+.groupR_modal {
+  width: 45%;
+  height: 100%;
+  text-align: center;
+}
+/* 이미지 */
+.groupR_modalImgbox {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+.groupR_modalImgbox .groupR_modalImg {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.groupR_modalImgbox { display: block; content: ""; clear: both;}
+
+/* 글쓰기 */
+.groupR_write {
+  width: 100%;
+  height: 50%;
+  padding: 0px 30px;
+}
+/* 글쓴 헤더 */
+.groupR_modalHeader {
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  font-weight: bold;
+  border-bottom: 5px dotted #A5F2AD;
+}
+/* 날짜 */
+.groupR_date {
+  float: left;
+  font-family: 'Tenada';
+  font-size: 22px;
+}
+
+/* 날씨, 마음 */
+.groupR_modalHeaderRight {
+  float: right;
+  padding: 5px;
+}
+.groupR_weather {
+  width: 45px;
+  height: 45px;
+  background-image: url('../img/weather_1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  float: left;
+}
+.groupR_mood {
+  width: 45px;
+  height: 45px;
+  background-image: url('../img/mood_1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 12px;
+  float: left;
+}
+
+@media (max-width: 1920px) {
+  .modal {
+      width: 1920px;
+  }
+}
