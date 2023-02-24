@@ -5,39 +5,79 @@ import "react-datepicker/dist/react-datepicker.css";
 import './datepicker.css';
 import MyDiaryEach from "./MyDiaryEach";
 import ko from 'date-fns/locale/ko';
-import pentool from 'C:/javascript/someus-app/src/img/pentool.png';
+import pentool from '../img/pentool.png';
 import NaviDiary from "../navigation/NaviDiary";
 import '../navigation/navi.css';
 import './mydiarylist.css';
 import TodoList from "./TodoList";
 import Modal_Mydiary from "./Modal_Mydiary";
-
-
-
+import jwt_decode from 'jwt-decode';
 
 const MyDiaryList = ({ history, name }) => {
 
     const [modalState, setModalState] = useState(false);
 
+    const [responseMemberId,setResponseMemberId] = useState();
+    const memberId = 'jkstest';
+    const memberPw = "wjdrytjd@";
     const closeModal = () => {
         setModalState(false);
     };
 
+    const [token, setToken ] = useState('');
+
+    //리스트가 마운트 될 때, token값을 받아와서 로그 출력해봄.
+    useEffect(() => {
+        axios.post(`http://localhost:8080/login`,
+                { memberId, memberPw })
+                .then((response) => {
+                    console.log('response-----');
+                    console.log(response);
+                    console.log(response.data);
+                    console.log(jwt_decode(response.data).sub);
+                    console.log('responseMemberId');
+                    setResponseMemberId(jwt_decode(response.data).sub);
+                    console.log(responseMemberId);
+                    setToken(response.data);
+                    setList(response.data.list);
+                    console.log('------token-----------');
+                    sessionStorage.setItem('token',response.data);
+                    console.log(sessionStorage.getItem('token'));
+                    getTodos();
+                })
+                .catch((error) => {
+                    console.log(error);
+                    return;
+                })
+    },[]);
+
     const [list, setList] = useState([]);
     const [startDate, setStartDate] = useState(new Date());
 
-    // useEffect(() => {
-    //     axios.get(`http://localhost:8080/api/someus/private`,
-    //         { headers: { 'Authorization': `Bearer ${sessionStorage.getItem('token')}` } })
-    //         .then((response) => {
-    //             console.log(response);
-    //             setList(response.data.list);
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //             return;
-    //         })
-    // })
+    //{ 변수 }TodoList 기본 데이터(서버에서 GET으로 받아와야 함.)setTodos(response.data.list)
+    const [todos, setTodos] = useState([]);
+
+    //{ 함수 }Todos를 받아오는 함수 설정, useEffect할 때 getTodos함수 실행 필요!!
+    async function getTodos(){
+        try {
+            const response = await axios.get('http://localhost:8080/api/someus/private/goal',
+            {   headers: { 'Authorization': `Bearer ${sessionStorage.getItem('token')}` },
+                params:{
+                    memberId: memberId,
+                    goalDate: startDate 
+                }
+            });
+            console.log('response.data=',response.data);
+            const dataA = response.data;
+            setTodos(dataA);
+            //데이터가 저장되어도 한박자 느리게 반응되니까 useCallback으로 조정해야 할 듯.
+            console.log('response.data=todos');
+            console.log(todos);
+        } catch(error){
+            console.log(error);
+            return;
+        };
+    };
 
     // 요일의 이름 반환
     const getDayName = (date) => {
@@ -60,11 +100,10 @@ const MyDiaryList = ({ history, name }) => {
         history.push(`/someus/private/write`)
     }
 
-
-
     // 날짜 변경 시 해당 날짜를 기준으로 목록이 리랜더링
     const handlerChangeDate = (date) => {
         setStartDate(date);
+        console.log(startDate);
         axios.get(`http://localhost:8080/api/someus/private/다이어리아이디`,
             { headers: { 'Authorization': `Bearer ${sessionStorage.getItem('token')}` } })
             .then((response) => {
@@ -110,7 +149,7 @@ const MyDiaryList = ({ history, name }) => {
                                 />
                             </div>
                             <div className="todo-box">
-                                <TodoList />
+                                <TodoList todos={todos} setTodos={setTodos} startDate={startDate} getTodos={getTodos}/>
                             </div>
                         </div>
                         <div className='diary-container'>
